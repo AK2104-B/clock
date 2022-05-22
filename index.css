@@ -1,0 +1,100 @@
+body{
+    color: aliceblue;
+    background-color: rgb(17, 17, 18);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.clock .circle{
+   content: '';
+   position: absolute;
+   background-color: rgb(251, 248, 248);
+   z-index: 11;
+   width: 18px;
+   height: 18px;
+   top: 47.0%;
+   left: 47.0%;
+   border-radius:50% ;
+   -webkit-border-radius:50% ;
+   -moz-border-radius:50% ;
+   -ms-border-radius:50% ;
+   -o-border-radius:50% ;
+}
+.clock{
+   /* background-color: rgb(202, 64, 87);*/
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+  border:2px solid black;
+  position: relative;
+  top:100px;
+  color: rgb(11, 239, 247);
+  
+  
+  box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 40px #03e9f4,
+                0 0 60px #03e9f4;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+
+ .clock .number {
+  position:absolute;
+  text-align: center;
+  --rotate:0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  font-size: 20px;
+  transform:rotate(var(--rotation)) ;
+  
+}
+.number1{--rotation:30deg;}
+.number2{--rotation:60deg;}
+.number3{--rotation:90deg;}
+.number4{--rotation:120deg;}
+.number5{--rotation:150deg;}
+.number6{--rotation:180deg;}
+.number7{--rotation:210deg;}
+.number8{--rotation:240deg;}
+.number9{--rotation:270deg;}
+.number10{--rotation:300deg;}
+.number11{--rotation:330deg;}
+
+.clock .hand{
+    --rotation:0;
+   position:absolute;
+   bottom:50%;
+   left:50%;
+   border: 1px solid white;
+   border-top-left-radius:10px;
+   border-top-right-radius: 10px;
+   transform-origin:bottom ;
+   z-index: 10;
+   transform: translateX(-50%) rotate(calc(var(--rotation)*1deg));
+   color: rgb(11, 239, 247);
+  
+  
+   box-shadow: 0 0 5px #03e9f4,
+                 0 0 25px #03e9f4,
+                 0 0 40px #03e9f4,
+                 0 0 60px #03e9f4;
+
+  
+}
+.clock .hand.sec{
+    width: 3px;
+    height: 45%;
+    background-color: yellow;
+}
+.clock .hand.min{
+    width: 7px;
+    height: 37%;
+    background-color: rgb(15, 15, 15);
+}
+.clock .hand.houre{
+    width: 8px;
+    height: 30%;
+    background-color: rgb(8, 8, 8);
+}
